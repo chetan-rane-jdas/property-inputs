@@ -2,6 +2,8 @@ import React from "react";
 import DataGrid from "./DataGrid";
 import RecursiveTable from "./recursivetable";
 import PropertiesWindow from "./propertieswindow";
+import IframeComponent from "./iframeComponent";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles"
@@ -42,7 +44,10 @@ function App() {
 	return (
 			<div className='App'>
 				<Router>
-        <Link to='/data-grid'>Data Grid</Link> | <Link to='/recursive-table'>Recursive Table</Link> | <Link to='/properties-window'>Properties Window</Link>
+        <Link to='/data-grid'>Data Grid</Link> | 
+        <Link to='/recursive-table'>Recursive Table</Link> | 
+        <Link to='/properties-window'>Properties Window</Link>| 
+        <Link to='/iframe-component'>Iframe component</Link>
 					
 						<Switch>
 							<Route path='/data-grid'>
@@ -53,6 +58,9 @@ function App() {
 							</Route>
               <Route path='/properties-window'>
 								<PropertiesWindow/>
+							</Route>
+              <Route path='/iframe-component'>
+								<IframeComponent/>
 							</Route>
 						</Switch>
 				</Router>

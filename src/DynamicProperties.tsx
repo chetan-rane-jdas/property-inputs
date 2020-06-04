@@ -15,6 +15,7 @@ import { LightTheme } from "@jda/lui-common-component-library";
 import CanvasProperties from "./canvasProperties";
 import CardProperties from "./cardProperties";
 
+
 const access: Array<Record<string, string | number>> = [
 	{ displayName: "Public", key: 1 },
 	{ displayName: "Private to System", key: 2 },

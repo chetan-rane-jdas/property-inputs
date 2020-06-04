@@ -13,7 +13,7 @@ export interface PropertyProps {
     defaultValue?: string;
     dataEnum?: Array<string | number>;
     dataURL?: string;
-    properties?: Array<PropertyGroupProps>;
+    propertyGroup?: PropertyGroupProps;
 }
 
 export interface PropertyGroupProps {
@@ -25,5 +25,47 @@ export interface PropertyGroupProps {
 
 export interface CanvasConfigProps {
     properties: Array<PropertyGroupProps>;
-    sections: Array<PropertyGroupProps>;
+    sections?: Array<PropertyGroupProps>;
 }
+
+/**
+ *  {
+ *  properties : {
+ *  [
+ *      {
+ *          ropertyGroupId: "cavnas-properties",
+            propertyGroupLabel: "Canvas Properties",
+            properties: [  
+                propertyLabel: string;
+                uiElementType: string;
+                placeholder?: string;
+                helperText?: string;
+                multiline?: boolean;
+                multiple?: boolean;
+                onChange?: Function;
+                required?: Function;
+                validationHook?: Function;
+                derivesFrom?: string;
+                defaultValue?: string;
+                dataEnum?: Array<string | number>;
+                dataURL?: string;
+                propertyGroup: {
+                    properties : [
+                        
+                    ]
+
+                };
+            }
+
+            ]
+            sections?: Array<PropertyProps>;
+ * 
+ *      }
+ * ]
+ * }
+ *  sections : {}
+ * 
+ * }
+ * 
+ * 
+ */
